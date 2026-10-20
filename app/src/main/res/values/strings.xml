@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Ativ3</string>
+    <string name="txt_splash_screen">"Bem Vindo! Esse é seu app de consulta de cep"</string>
+    <string name="txt_pedido_cep">Digite seu CEP:</string>
+    <string name="cep_info">CEP info</string>
+    <string name="hint_cep_input">Seu CEP aqui</string>
+    <string name="txt_btn_main">Obter Dados</string>
+    <string name="txt_toast_invalid_cep">Digite um CEP valido!</string>
+</resources>
