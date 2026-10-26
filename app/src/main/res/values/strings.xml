@@ -6,4 +6,14 @@
     <string name="hint_cep_input">Seu CEP aqui</string>
     <string name="txt_btn_main">Obter Dados</string>
     <string name="txt_toast_invalid_cep">Digite um CEP valido!</string>
+    <string name="msg_carregando">Consultando CEP...</string>
+    <string name="label_cep">CEP: %1$s</string>
+    <string name="label_logradouro">Logradouro: %1$s</string>
+    <string name="label_bairro">Bairro: %1$s</string>
+    <string name="label_cidade">Cidade: %1$s</string>
+    <string name="label_uf">UF: %1$s</string>
+    <string name="label_ibge">Código IBGE: %1$s</string>
+    <string name="label_ddd">DDD: %1$s</string>
+
+    <string name="descricao_bandeira">Bandeira do estado</string>
 </resources>

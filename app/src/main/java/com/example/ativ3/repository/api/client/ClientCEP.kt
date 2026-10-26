@@ -6,28 +6,31 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 class ClientCEP {
-    class ClientRetrofit {
-        companion object {
-            private lateinit var INSTANCE: Retrofit
-            private const val BASE_URL = "viacep.com.br/ws"
 
-            private fun getClientInstance(): Retrofit {
+    companion object {
+        private lateinit var INSTANCE: Retrofit
+
+        private const val BASE_URL = "https://viacep.com.br/ws/"
+
+        private fun getClientInstance(): Retrofit {
+
+            if (!::INSTANCE.isInitialized) {
+
                 val http = OkHttpClient.Builder()
-                if (!::INSTANCE.isInitialized) {
-                    INSTANCE = Retrofit.Builder()
-                        .baseUrl(BASE_URL)
-                        .client(http.build())
-                        .addConverterFactory(GsonConverterFactory.create())
-                        .build()
-                }
-                return INSTANCE
+
+                INSTANCE = Retrofit.Builder()
+                    .baseUrl(BASE_URL)
+                    .client(http.build())
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .build()
             }
+
+            return INSTANCE
         }
 
-        fun createBlogPostService(): ServiceCEP {
+        // Conecta o cliente Retrofit à interface de serviço.
+        fun createCEPService(): ServiceCEP {
             return getClientInstance().create(ServiceCEP::class.java)
         }
-
     }
-
 }

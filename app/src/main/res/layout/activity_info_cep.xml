@@ -8,15 +8,122 @@
     tools:context=".ui.InfoCepActivity">
 
     <TextView
-        android:id="@+id/txt_info_cep"
-        android:layout_width="wrap_content"
+        android:id="@+id/txt_titulo_estado"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/cep_info"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/dark_blue"
 
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/web_bandeira"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <WebView
+        android:id="@+id/web_bandeira"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scrollbars="none"
+
+        app:layout_constraintTop_toBottomOf="@id/txt_titulo_estado"
+        app:layout_constraintBottom_toTopOf="@id/txt_cep"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/txt_cep"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+
+        app:layout_constraintTop_toBottomOf="@id/web_bandeira"
+        app:layout_constraintBottom_toTopOf="@id/txt_logradouro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/txt_logradouro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textSize="18sp"
+
+        app:layout_constraintTop_toBottomOf="@id/txt_cep"
+        app:layout_constraintBottom_toTopOf="@id/txt_bairro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/txt_bairro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textSize="18sp"
+
+        app:layout_constraintTop_toBottomOf="@id/txt_logradouro"
+        app:layout_constraintBottom_toTopOf="@id/txt_cidade"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/txt_cidade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textSize="18sp"
+
+        app:layout_constraintTop_toBottomOf="@id/txt_bairro"
+        app:layout_constraintBottom_toTopOf="@id/txt_uf"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/txt_uf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textSize="18sp"
+
+        app:layout_constraintTop_toBottomOf="@id/txt_cidade"
+        app:layout_constraintBottom_toTopOf="@id/txt_ibge"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/txt_ibge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textSize="18sp"
+
+        app:layout_constraintTop_toBottomOf="@id/txt_uf"
+        app:layout_constraintBottom_toTopOf="@id/txt_ddd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/txt_ddd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textSize="18sp"
+
+        app:layout_constraintTop_toBottomOf="@id/txt_ibge"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

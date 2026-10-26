@@ -1,37 +1,41 @@
 package com.example.ativ3.repository.api.model
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
-class EntityCEP {
+class EntityCEP: Serializable {
 
     @SerializedName("cep")
     var cep: String = "01001-000"
 
-    @SerializedName("cep")
+    @SerializedName("logradouro")
     var logradouro: String = "Praça da Sé"
 
-    @SerializedName("cep")
+    @SerializedName("complemento")
     var complemento: String = "lado ímpar"
 
-    @SerializedName("cep")
+    @SerializedName("unidade")
     var unidade: String = ""
 
-    @SerializedName("cep")
+    @SerializedName("bairro")
     var bairro: String = "Sé"
 
-    @SerializedName("cep")
+    @SerializedName("localidade")
     var localidade: String = "São Paulo"
 
-    @SerializedName("cep")
+    @SerializedName("uf")
     var uf: String = "SP"
 
-    @SerializedName("cep")
+    @SerializedName("estado")
     var estado: String = "São Paulo"
 
-    @SerializedName("cep")
+    @SerializedName("regiao")
     var regiao: String = "Sudeste"
 
-    @SerializedName("cep")
+    @SerializedName("ddd")
     var ddd: String = "11"
+
+    @SerializedName("erro")
+    var erro: Boolean = false
 
 }
