@@ -6,34 +6,37 @@ import java.io.Serializable
 class EntityCEP: Serializable {
 
     @SerializedName("cep")
-    var cep: String = "01001-000"
+    var cep: String = ""
 
     @SerializedName("logradouro")
-    var logradouro: String = "Praça da Sé"
+    var logradouro: String = ""
 
     @SerializedName("complemento")
-    var complemento: String = "lado ímpar"
+    var complemento: String = ""
 
     @SerializedName("unidade")
     var unidade: String = ""
 
     @SerializedName("bairro")
-    var bairro: String = "Sé"
+    var bairro: String = ""
 
     @SerializedName("localidade")
-    var localidade: String = "São Paulo"
+    var localidade: String = ""
 
     @SerializedName("uf")
-    var uf: String = "SP"
+    var uf: String = ""
 
     @SerializedName("estado")
-    var estado: String = "São Paulo"
+    var estado: String = ""
 
     @SerializedName("regiao")
-    var regiao: String = "Sudeste"
+    var regiao: String = ""
 
     @SerializedName("ddd")
-    var ddd: String = "11"
+    var ddd: String = ""
+
+    @SerializedName("ibge")
+    var ibge: String = ""
 
     @SerializedName("erro")
     var erro: Boolean = false
